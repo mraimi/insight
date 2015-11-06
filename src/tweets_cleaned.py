@@ -1,7 +1,6 @@
-import json
-
-source = open('../data-gen/tweets.txt', 'r')
-dest = open('../tweet_output/ft1.txt','w')
+import json, sys
+source = open(sys.argv[1], 'r')
+dest = open(sys.argv[2], 'w')
 unicodeCount = 0
 for line in source:
     text = ''
