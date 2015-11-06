@@ -11,6 +11,10 @@ for line in source:
         s = jl['text']
         text = s.encode('ascii','ignore')
         text = text.replace('\n',' ').replace('\t',' ')
+
+        # Determines whether a tweet has unicode by assuming it's ascii.
+        # If an encode error is thrown that means the string contained
+        # some unicode at which point we bump the unicode counter.
         try:
             s.decode('ascii')
         except UnicodeEncodeError:
