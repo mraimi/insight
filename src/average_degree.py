@@ -35,7 +35,7 @@ def main():
         newVals = pairify(hashtags, graph, postPruneVals[0], postPruneVals[1])
         edges = newVals[0]
         vertices = newVals[1]
-        dest.write("Avg: " + str(getAverage(edges, vertices)) + "\n")
+        dest.write("{0:.2f}".format(getAverage(edges, vertices)) + "\n")
     
     source.close()
     dest.close()
