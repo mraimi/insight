@@ -4,6 +4,7 @@ def main():
     source = open(sys.argv[1], 'r')
     dest = open(sys.argv[2], 'w')
     unicodeCount = 0
+    
     for line in source:
         text = ''
         created = ''
